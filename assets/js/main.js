@@ -32,20 +32,24 @@ $(function(){
             $(".global-color").removeClass("active");
         });
 
-        var vids = $("video"); 
-        $.each(vids, function(){
-               this.controls = false; 
-        }); 
+        var bgVidElm = $("#bg_video"); 
         //Loop though all Video tags and set Controls as false
         
-        $("video").click(function() {
-          //console.log(this); 
-          if (this.paused) {
-            this.play();
-          } else {
-            this.pause();
-          }
+        var videoElements = document.querySelectorAll('video');
+        
+          videoElements.forEach(function(videoElement) {
+            videoElement.controls = false;
+        
+            videoElement.addEventListener('play', function () {
+              this.controls = false;
+            });
+        
+            videoElement.addEventListener('pause', function () {
+              this.controls = false;
+            });
         });
+        $("#bgVidElm").setAttribute('loop', true);
+        $("#bgVidElm").play();
 
     });
 
