@@ -42,6 +42,10 @@ body {
 a {
   color: orange;
 }
+.a-notavailable {
+  color: #fff;
+  text-decoration: line-through;
+}
 
 a:hover {
   color: #fff;
