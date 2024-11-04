@@ -473,6 +473,15 @@ button:hover {
 
   .modal {
     width: 480px;
+    top: 10% !important;
+  }
+
+  .modal .modal-body {
+    padding: 15px;
+    background: transparent;
+    position: relative;
+    overflow: scroll !important;
+    height: 80vh !important;
   }
 
   .send-message {
